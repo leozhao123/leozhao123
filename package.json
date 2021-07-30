@@ -1,11 +1,19 @@
 {
   "name": "week2",
   "version": "1.0.0",
-  "description": "",
+  "description": "• A project description\r this is the week2 git hub test project\r • install instructions\r direct pull from git hub\r • run instructions\r install json pakage before run\r • write a table of weeks for the course, and the course content\r this is the week2 3813ICT Software Frameworks course content",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leozhao123/leozhao123.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leozhao123/leozhao123/issues"
+  },
+  "homepage": "https://github.com/leozhao123/leozhao123#readme"
 }
