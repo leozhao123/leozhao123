@@ -1,19 +1,33 @@
-• A project description
-this is the week2 git hub test project
+# array-add-num [![Build Status](https://travis-ci.org/palashmon/array-add-num.svg?branch=master)](https://travis-ci.org/palashmon/array-add-num)
 
-• install instructions
-direct pull from git hub
+> Add up all the numbers in the array
 
-• run instructions
-install json pakage before run
+## Install
 
-• write a table of weeks for the course, and the course content
-this is the week2 3813ICT Software Frameworks course content
+```
+$ npm i array-add-num
+```
 
+## Usage
 
-Weeks of teaching | Course content
------------- | -------------
-Week 1|Introduction to JavaScript and Nodej
-Week 2|Code Version Control with Git and GitHub
-Week 3|NodeJS as a Server
-Week 4|Angular
+```js
+const arrayAdd = require('array-add-num');
+
+arrayAdd([1, 2, 3, 4]);
+//=> 10
+```
+
+## API
+
+### arrayAdd(input)
+
+#### input
+
+Type: `Array`<br>
+Default: `[]`
+
+Must be a JavaScript Array object.
+
+## License
+
+MIT © [Palash Mondal](https://github.com/palashmon)
