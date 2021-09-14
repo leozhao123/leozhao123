@@ -1,6 +1,0 @@
-64-bit versions of Microsoft Windows 10, 8, 7 (SP1)
-4 GB RAM minimum, 8 GB RAM recommended
-1.5 GB hard disk space + at least 1 GB for caches
-1024×768 minimum screen resolution
-Python 2.7, or Python 3.5 or newer
-pygame package
