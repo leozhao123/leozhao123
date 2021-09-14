@@ -1,0 +1,59 @@
+<div class="background">
+
+<h1>You have logged in {{userid}} </h1>
+
+
+<div *ngIf="users == true">
+    you are user
+</div>
+<div *ngIf="superadmin == true">
+    you are superadmin
+</div>
+<div *ngIf="groupadmin == true">
+    you are groupadmin
+</div>
+<div *ngIf="groupassis == true">
+    you are groupassis
+</div>
+<div class="check-list" *ngIf="superadmin==true">
+    This is the user lists: 
+    <ul class="check-list"><li><div *ngFor="let item of allusers ">
+       uersname : <b>{{item[0]}}</b> role : <b>{{item[1]}}</b>
+       <button (click)="removeuser(item[0])">remove this user</button>
+       <button (click)="setasUser(item)">set this user as user</button>
+       <button (click)="setasgroupsAssis(item)" >set this user as groupsAssis</button>
+       <button (click)="setasGroupAdmin(item)">set this user as GroupAdmin</button>
+       <button (click)="setasSuperAdmin(item)">set this user as SuperAdmin</button>
+    
+            </div>
+        <div *ngIf="groupadmin||superadmin||groupassis">
+            <div ng-hide="myValue" class="ng-hide"><button (click)="newgroup()">newgroup</button></div>
+            <li><div *ngFor="let item of groupbyname ">
+                group: <b>        {{groupbyname.indexOf(item)}}                </b> <p>has user:  <b>{{item[1]}}</b> </p>
+                addnew user to group :<input type="text" name="togroup" #togroup >
+
+                <button (click)="usertogroup(togroup.value,groupbyname.indexOf(item))">submit</button>
+                remove user from group:<input type="text" name="removeGroup" #removeGroup >
+                <button (click)="removeFromGroup(removeGroup.value,groupbyname.indexOf(item))">submit</button>
+                <div ng-hide="myValue" class="ng-hide"><button (click)="removegroup(groupbyname.indexOf(item))">removegroup</button></div>
+
+            </div>
+        </li> 
+        </div>
+        
+    </li> </ul>
+    <form>
+        addnew user :<input type="text" name="newuser" #newuser > 
+        <button (click)="adduser(newuser.value)">submit</button>
+    </form>
+    <div *ngIf="groupadmin || superadmin">
+   
+</div>
+<div *ngIf="groupassis">
+    manageuser as groupassis
+</div>
+
+</div>
+
+
+

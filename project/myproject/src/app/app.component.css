@@ -1,0 +1,9 @@
+.username {
+    position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  }
+  .logout{
+    position: fixed; /* or absolute */
+    left: 50%;
+  }
