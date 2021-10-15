@@ -76,8 +76,8 @@ describe('Server test', function(){
               before(function(){console.log('before test')})
               after(function(){console.log('after test')})
             
-              describe('login', function(){
-                it("login", (done)=>{
+              describe('logout', function(){
+                it("logout", (done)=>{
                     chai.request(app).post('/login').type('form')
                     .send({name:'2',password:'2'})
                     .end((err, res)=>{
@@ -106,8 +106,8 @@ describe('Server test', function(){
                     })
                   })
                 })
-                describe('newroom', function(){
-                  it("newroom", (done)=>{
+                describe('login', function(){
+                  it("login", (done)=>{
                       chai.request(app).post('/login').type('form')
                       .send({name:'2',password:'2'})
                       .end((err, res)=>{
@@ -118,4 +118,8 @@ describe('Server test', function(){
                       })
                     })
                   })
-                })
+                  describe('Server test', function(){
+                    before(function(){console.log('before test')})
+                    after(function(){console.log('after test')})
+                  
+                
