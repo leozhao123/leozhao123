@@ -1,0 +1,10 @@
+<h2>login</h2>
+<span >login Name</span>
+<input  type="text" placeholder=" Name"  [(ngModel)] = "userinput.name" name = "name">
+<span>password</span>
+<input  type="text" placeholder="password"  [(ngModel)] = "userinput.password" name = "password">
+<button (click) ="login()"> login</button>
+<div *ngIf="a == true">
+    Wrong password
+</div>
+

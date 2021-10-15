@@ -1,0 +1,7 @@
+<h1>upload image</h1>
+<form>
+<input type="file" (change)='onFileSelected($event)'name="uploadfile" id="uploadfile" />
+
+<button type="button" (click)="onUpload()">Submit</button>
+</form>
+<img src="image\{{imagepath}}">

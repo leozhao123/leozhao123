@@ -1,0 +1,10 @@
+<h2>Edit User</h2>
+<form>
+<span >User Name</span>
+<input  type="text" placeholder="User Name"  [(ngModel)] = "editUser.name" name = "name">
+<span >User enail</span>
+<input  type="number" placeholder="email" [(ngModel)] = "editUser.email"  name = "email">
+<span >User role</span>
+<input type="text" placeholder="role" [(ngModel)] = "editUser.role"  name = "role">
+</form>
+<button (click) ="edit()"> Submit</button>

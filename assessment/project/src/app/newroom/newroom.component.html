@@ -1,0 +1,49 @@
+<div *ngIf=check()>
+    <h2>Add room</h2>
+    <span >room Name</span>
+    <input  type="text"   [(ngModel)] = "newchart.roomname" >
+    <span >id</span>
+    <input  type="text"  [(ngModel)] = "newchart.id">    
+    <span>channelname</span>  
+    <input  type="text"  [(ngModel)] = "newchart.channelname">      
+
+    <button (click) ="addroom()"> Add Room</button>
+</div>
+<div *ngFor = " let use of chart">
+    <h4>room:{{use.roomname}}</h4>
+    <li >id: {{use.id}}</li>
+    <button (click)= "showchan(use)">show channel list</button>
+    <div *ngFor = " let aha of channel">
+            <li >channelname: {{aha.channelname}}</li>
+            <div *ngIf=check()>
+                <input  type="text"[(ngModel)]  = "newchannel.roomid">
+
+            <button (click) ="putuser(use.roomname)"> Add user</button>
+                </div>
+            <button (click)= "showuser(use)">show user list</button>
+            <div *ngFor = " let ss of users">
+                <li >channelname: {{ss.name}}</li>
+            </div>
+    </div>
+
+    
+<div *ngIf=check()>
+
+<li><button (click) = "edit(use)" >edit</button></li>
+
+<li><button (click) = "delete(use)" >delete</button></li>
+<span >id</span>
+<input  type="text"   [(ngModel)] = "newchannel.id" >
+<span >name</span>
+<input  type="text"   [(ngModel)] = "newchannel.channelname" >
+<span >room id</span>
+<input  type="text"[(ngModel)]  = "newchannel.roomid">
+<button (click) ="addchannel()"> Add channel</button>
+<span >add user</span>
+
+<input  type="text"[(ngModel)]  = "editUser.name">
+
+
+</div>
+</div>
+    

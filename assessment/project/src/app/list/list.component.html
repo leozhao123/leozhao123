@@ -1,0 +1,14 @@
+<button (click)= "add()" > Add user</button>
+<button (click)="toroom()">toroom</button>
+<button (click)="toimage()">toimage</button>
+
+<div *ngFor = " let use of user">
+<h4>username:{{use.name}}</h4>
+<li >Email: {{use.email}}</li>
+<li > role:  {{use.role}}</li>
+<div *ngIf="a==='suerpadimin'">
+
+<li><button (click) = "edit(use)" >edit</button></li>
+<li><button (click) = "delete(use)" >delete</button></li>
+
+</div>
